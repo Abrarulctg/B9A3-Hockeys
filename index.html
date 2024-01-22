@@ -12,6 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/e2eb73585f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <!-- DaisyUI & Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -23,6 +27,7 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
+                        'primary-color': '#FF4240',
                     }
                 }
             }
@@ -38,12 +43,120 @@
 
 <body>
     <!-- Header Section -->
-    <header>
+    <header class="container max-w-7xl mx-auto mb-10">
+        <div class="navbar bg-base-100 py-9 px-4">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <!-- Responsive Navbar Menu -->
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li class="hover:text-primary-color hover:font-semibold"><a>Home</a></li>
+                        <li class="hover:text-primary-color hover:font-semibold"><a>About</a></li>
+                        <li class="hover:text-primary-color hover:font-semibold"><a>Pages</a></li>
+                        <li class="hover:text-primary-color hover:font-semibold"><a>Blog</a></li>
+                        <li class="hover:text-primary-color hover:font-semibold"><a>Contact</a></li>
+                    </ul>
+                </div>
+                <a class="btn btn-ghost text-3xl lg:text-4xl font-extrabold">Hockey's</a>
+            </div>
+            <!-- Main Navbar Menu-->
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-6">
+                    <li class="hover:text-primary-color hover:font-semibold"><a>Home</a></li>
+                    <li class="hover:text-primary-color hover:font-semibold"><a>About</a></li>
+                    <li class="hover:text-primary-color hover:font-semibold"><a>Pages</a></li>
+                    <li class="hover:text-primary-color hover:font-semibold"><a>Blog</a></li>
+                    <li class="hover:text-primary-color hover:font-semibold"><a>Contact</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <a class=""><i class="fa-solid fa fa-magnifying-glass mr-4 hidden lg:flex"></i></a>
+                <a class="btn bg-primary-color hover:bg-primary-color text-white font-bold">Get Ticket</a>
+            </div>
+        </div>
 
+        <!-- Slider -->
+        <div class="px-4">
+            <div class="carousel w-full">
+                <!-- Slider 1 -->
+                <div id="slide1" class="carousel-item relative w-full">
+                    <img src="./Images/slider-1.png" class="w-full" />
+                    <div
+                        class="absolute flex transform -translate-y-1/2 left-5 right-5 bottom-0 lg:justify-start justify-center">
+                        <a href="#slide3" class="btn btn-circle bg-[#131318] hover:bg-[#131318] text-white">❮</a>
+                        <a href="#slide2" class="btn btn-circle bg-[#131318] hover:bg-[#131318] text-white">❯</a>
+                    </div>
+                    <!-- black box on slide bottom -->
+                    <div class="flex justify-center flex-col">
+                        <div
+                            class="lg:absolute bottom-0 lg:bottom-8 lg:right-8 bg-black text-white p-8 space-y-4 lg:w-1/2 rounded-xl">
+                            <h1 class="font-extrabold text-xl lg:text-2xl">Meet all the heroes from the field</h1>
+                            <p>Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor.
+                                Purus urna in sit nullam proin. </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div id="slide2" class="carousel-item relative w-full">
+                    <img src="./Images/slider-2.png" class="w-full" />
+                    <div
+                        class="absolute flex transform -translate-y-1/2 left-5 right-5 bottom-0 lg:justify-start justify-center">
+                        <a href="#slide1" class="btn btn-circle bg-[#131318] hover:bg-[#131318] text-white">❮</a>
+                        <a href="#slide3" class="btn btn-circle bg-[#131318] hover:bg-[#131318] text-white">❯</a>
+                    </div>
+                    <!-- black box on slide bottom -->
+                    <div class="flex justify-center flex-col">
+                        <div
+                            class="lg:absolute bottom-0 lg:bottom-8 lg:right-8 bg-black text-white p-8 space-y-4 lg:w-1/2 rounded-xl">
+                            <h1 class="font-extrabold text-xl lg:text-2xl">Meet all the heroes from the field</h1>
+                            <p>Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor.
+                                Purus urna in sit nullam proin. </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3  -->
+                <div id="slide3" class="carousel-item relative w-full">
+                    <img src="./Images/slider-3.png" class="w-full" />
+                    <div
+                        class="absolute flex transform -translate-y-1/2 left-5 right-5 bottom-0 lg:justify-start justify-center">
+                        <a href="#slide2" class="btn btn-circle bg-[#131318] hover:bg-[#131318] text-white">❮</a>
+                        <a href="#slide1" class="btn btn-circle bg-[#131318] hover:bg-[#131318] text-white">❯</a>
+                    </div>
+
+                    <!-- black box on slide bottom -->
+                    <div class="flex justify-center flex-col">
+                        <div
+                            class="lg:absolute bottom-0 lg:bottom-8 lg:right-8 bg-black text-white p-8 space-y-4 lg:w-1/2 rounded-xl">
+                            <h1 class="font-extrabold text-xl lg:text-2xl">Meet all the heroes from the field</h1>
+                            <p>Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor.
+                                Purus urna in sit nullam proin. </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </header>
     <!-- Main Section -->
-    <main>
+    <main class="container max-w-7xl mx-auto">
+        <!-- Professional Hockeys Club Section -->
+        <section>
+            <div class=" text-center border-gray-300">
+                <h1 class="text-3xl font-extrabold">
+                    Professional Hockeys Club
+                </h1>
+                <p>Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in
+                    sit nullam proin. </p>
+            </div>
 
+        </section>
     </main>
 
     <!-- Footer Section -->
